@@ -1,7 +1,7 @@
 import { Facebook, Mail, MapPin, Phone } from "lucide-react";
 
 import { About } from "@/components/tomi-trans/About";
-import roadsideAsset from "@/assets/tomi-trans-roadside.jpg.asset.json";
+const ROADSIDE_BG = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80";
 import { Contact } from "@/components/tomi-trans/Contact";
 import { Coverage } from "@/components/tomi-trans/Coverage";
 import { Footer } from "@/components/tomi-trans/Footer";
