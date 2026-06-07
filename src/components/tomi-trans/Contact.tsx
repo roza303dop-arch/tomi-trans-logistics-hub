@@ -15,7 +15,6 @@ const formSchema = z.object({
 });
 
 type FormValues = z.infer<typeof formSchema>;
-
 type FormErrors = Partial<Record<keyof FormValues, string>>;
 
 const initialValues: FormValues = {
@@ -250,7 +249,7 @@ interface FieldProps {
   label: string;
   name: string;
   value: string;
-  error?: string;
+  error: string | undefined;
   type?: string;
   required?: boolean;
   onChange: (value: string) => void;

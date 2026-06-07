@@ -1,29 +1,129 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Facebook, Mail, MapPin, Phone } from "lucide-react";
+
+import { About } from "@/components/tomi-trans/About";
+import { Contact } from "@/components/tomi-trans/Contact";
+import { Coverage } from "@/components/tomi-trans/Coverage";
+import { Footer } from "@/components/tomi-trans/Footer";
+import { Hero } from "@/components/tomi-trans/Hero";
+import { Navbar } from "@/components/tomi-trans/Navbar";
+import { Services } from "@/components/tomi-trans/Services";
+import { WhyUs } from "@/components/tomi-trans/WhyUs";
+import blackTruck from "@/assets/tomi-trans-black-truck.jpg.asset.json";
+import ferry from "@/assets/tomi-trans-ferry.jpg.asset.json";
+import fleet from "@/assets/tomi-trans-fleet.jpg.asset.json";
+import hero from "@/assets/tomi-trans-hero.jpg.asset.json";
+import roadside from "@/assets/tomi-trans-roadside.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Tomi-Trans — Transport i logistyka w całej UE" },
+      {
+        name: "description",
+        content:
+          "Tomi-Trans to niezawodna firma transportowa z Bestwiny. Realizujemy przewozy krajowe i międzynarodowe na terenie całej Unii Europejskiej. Zadzwoń: 694 135 711",
+      },
+      {
+        name: "keywords",
+        content:
+          "transport międzynarodowy, firma transportowa, przewozy UE, spedycja, transport Bestwina, Tomi-Trans",
+      },
+      { property: "og:title", content: "Tomi-Trans — Transport i logistyka w całej UE" },
+      {
+        property: "og:description",
+        content:
+          "Nowoczesny transport krajowy i międzynarodowy z Polski do całej Unii Europejskiej. Terminowo, bezpiecznie i profesjonalnie.",
+      },
+      { property: "og:url", content: "/" },
+      { name: "robots", content: "index,follow" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero heroImageUrl={hero.url} />
+
+        <section className="border-y border-border/50 bg-surface/80 py-4 backdrop-blur-md">
+          <div className="section-inner grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <a href="tel:+48694135711" className="ticker-item">
+              <Phone className="size-4 text-primary" />
+              694 135 711
+            </a>
+            <a href="mailto:biuro@tomi-trans.pl" className="ticker-item">
+              <Mail className="size-4 text-primary" />
+              biuro@tomi-trans.pl
+            </a>
+            <div className="ticker-item">
+              <MapPin className="size-4 text-primary" />
+              Bestwina, Polska
+            </div>
+            <a
+              href="https://www.facebook.com/profile.php?id=100057443110108"
+              target="_blank"
+              rel="noreferrer"
+              className="ticker-item"
+            >
+              <Facebook className="size-4 text-primary" />
+              Zobacz nas na Facebooku
+            </a>
+          </div>
+        </section>
+
+        <About imageUrl={blackTruck.url} />
+        <Services />
+        <WhyUs />
+        <Coverage fleetImageUrl={fleet.url} ferryImageUrl={ferry.url} />
+
+        <section className="section-band">
+          <div className="section-inner grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="overflow-hidden rounded-lg border border-border/70">
+              <img
+                src={roadside.url}
+                alt="Ciężarówka Tomi-Trans podczas postoju na trasie w Europie Południowej"
+                className="h-[360px] w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <aside className="glass-panel flex flex-col justify-between p-6 sm:p-8">
+              <div>
+                <p className="section-kicker">Operacyjna gotowość</p>
+                <h2 className="section-title max-w-none">
+                  Partner dla firm, które potrzebują sprawnego transportu bez chaosu.
+                </h2>
+                <p className="section-copy max-w-none">
+                  Od pierwszego kontaktu po dostawę stawiamy na porządek działań, terminowość
+                  i przewidywalny standard współpracy. To właśnie wyróżnia Tomi-Trans na tle
+                  schematycznych stron i ofert konkurencji.
+                </p>
+              </div>
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                <div>
+                  <p className="font-stats text-4xl text-primary">24/7</p>
+                  <p className="mt-2 text-sm text-muted-foreground">kontakt w sprawie zleceń</p>
+                </div>
+                <div>
+                  <p className="font-stats text-4xl text-primary">UE</p>
+                  <p className="mt-2 text-sm text-muted-foreground">obsługa całej wspólnoty</p>
+                </div>
+                <div>
+                  <p className="font-stats text-4xl text-primary">B2B</p>
+                  <p className="mt-2 text-sm text-muted-foreground">partnerskie podejście do firm</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
