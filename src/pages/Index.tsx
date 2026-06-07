@@ -1,7 +1,7 @@
 import { Facebook, Mail, MapPin, Phone } from "lucide-react";
 
 import { About } from "@/components/tomi-trans/About";
-import roadsideAsset from "@/assets/tomi-trans-roadside.jpg.asset.json";
+const ROADSIDE_BG = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80";
 import { Contact } from "@/components/tomi-trans/Contact";
 import { Coverage } from "@/components/tomi-trans/Coverage";
 import { Footer } from "@/components/tomi-trans/Footer";
@@ -52,7 +52,7 @@ export default function Index() {
         <section className="section-band">
           <div className="section-inner grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="relative h-[360px] overflow-hidden rounded-lg border border-border/70">
-              <img src={roadsideAsset.url} alt="Tomi-Trans w drodze" className="absolute inset-0 h-full w-full object-cover" />
+              <div role="img" aria-label="Tomi-Trans w drodze" className="absolute inset-0 h-full w-full" style={{ backgroundImage: `url(${ROADSIDE_BG})`, backgroundSize: "cover", backgroundPosition: "center" }} />
             </div>
             <aside className="glass-panel flex flex-col justify-between p-6 sm:p-8">
               <div>

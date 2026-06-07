@@ -1,8 +1,8 @@
 import { Ship, Waypoints } from "lucide-react";
 
 import { SectionHeading } from "./SectionHeading";
-import fleetAsset from "@/assets/tomi-trans-fleet.jpg.asset.json";
-import ferryAsset from "@/assets/tomi-trans-ferry.jpg.asset.json";
+const FLEET_BG = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80";
+const FERRY_BG = "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80";
 
 const hubs = [
   { name: "Warszawa", left: "58%", top: "34%" },
@@ -56,7 +56,7 @@ export function Coverage() {
 
         <div className="space-y-4">
           <div className="relative h-[260px] overflow-hidden rounded-lg border border-border/70">
-            <img src={fleetAsset.url} alt="Flota Tomi-Trans" className="absolute inset-0 h-full w-full object-cover" />
+            <div role="img" aria-label="Flota Tomi-Trans" className="absolute inset-0 h-full w-full" style={{ backgroundImage: `url(${FLEET_BG})`, backgroundSize: "cover", backgroundPosition: "center" }} />
           </div>
 
           <div className="glass-panel p-6">
@@ -71,7 +71,7 @@ export function Coverage() {
             </div>
           </div>
           <div className="relative h-[220px] overflow-hidden rounded-lg border border-border/70">
-            <img src={ferryAsset.url} alt="Transport promowy Tomi-Trans" className="absolute inset-0 h-full w-full object-cover" />
+            <div role="img" aria-label="Transport promowy Tomi-Trans" className="absolute inset-0 h-full w-full" style={{ backgroundImage: `url(${FERRY_BG})`, backgroundSize: "cover", backgroundPosition: "center" }} />
           </div>
 
           <div className="glass-panel p-6">
