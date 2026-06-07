@@ -41,8 +41,8 @@ export function Navbar() {
           className={[
             "flex items-center justify-between rounded-lg border px-4 py-3 backdrop-blur-xl transition-all duration-300 md:px-6",
             scrolled
-              ? "border-border/80 bg-background/82 shadow-[0_18px_48px_-28px_color-mix(in_oklab,var(--primary)_22%,transparent)]"
-              : "border-border/40 bg-background/58",
+              ? "border-border/80 bg-[oklch(0.22_0.01_285/0.96)] shadow-[0_18px_48px_-28px_color-mix(in_oklab,var(--primary)_22%,transparent)]"
+              : "border-border/70 bg-[oklch(0.2_0.01_285/0.9)]",
           ].join(" ")}
         >
           <a href="#start" className="flex items-center gap-3" aria-label="Tomi-Trans — strona główna">

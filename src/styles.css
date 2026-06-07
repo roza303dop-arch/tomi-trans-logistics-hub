@@ -198,12 +198,18 @@
     text-wrap: balance;
   }
 
+  .hero-title--compact {
+    max-width: 14ch;
+    font-size: clamp(2.6rem, 6.4vw, 5rem);
+    line-height: 0.95;
+  }
+
   .hero-copy {
-    margin-top: 1.4rem;
-    max-width: 41rem;
+    margin-top: 1.2rem;
+    max-width: 36rem;
     color: color-mix(in oklab, var(--foreground) 78%, var(--muted-foreground));
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    line-height: 1.85;
+    font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+    line-height: 1.75;
   }
 
   .glass-panel {
