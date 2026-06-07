@@ -177,7 +177,7 @@ export function Contact() {
               <Field
                 label="Firma"
                 name="company"
-                value={values.company}
+                value={values.company ?? ""}
                 error={errors.company}
                 onChange={(value) => handleChange("company", value)}
               />
