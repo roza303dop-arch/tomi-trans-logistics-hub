@@ -194,7 +194,7 @@ export function Contact() {
                 label="Telefon"
                 name="phone"
                 type="tel"
-                value={values.phone}
+                value={values.phone ?? ""}
                 error={errors.phone}
                 onChange={(value) => handleChange("phone", value)}
               />
