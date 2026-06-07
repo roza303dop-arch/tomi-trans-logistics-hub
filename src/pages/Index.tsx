@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Facebook, Mail, MapPin, Phone } from "lucide-react";
 
 import { About } from "@/components/tomi-trans/About";
@@ -15,35 +14,7 @@ import fleet from "@/assets/tomi-trans-fleet.jpg.asset.json";
 import hero from "@/assets/tomi-trans-hero.jpg.asset.json";
 import roadside from "@/assets/tomi-trans-roadside.jpg.asset.json";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Tomi-Trans — Transport i logistyka w całej UE" },
-      {
-        name: "description",
-        content:
-          "Tomi-Trans to niezawodna firma transportowa z Bestwiny. Realizujemy przewozy krajowe i międzynarodowe na terenie całej Unii Europejskiej. Zadzwoń: 694 135 711",
-      },
-      {
-        name: "keywords",
-        content:
-          "transport międzynarodowy, firma transportowa, przewozy UE, spedycja, transport Bestwina, Tomi-Trans",
-      },
-      { property: "og:title", content: "Tomi-Trans — Transport i logistyka w całej UE" },
-      {
-        property: "og:description",
-        content:
-          "Nowoczesny transport krajowy i międzynarodowy z Polski do całej Unii Europejskiej. Terminowo, bezpiecznie i profesjonalnie.",
-      },
-      { property: "og:url", content: "/" },
-      { name: "robots", content: "index,follow" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function Index() {
   return (
     <>
       <Navbar />
