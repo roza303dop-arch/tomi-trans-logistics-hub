@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, PhoneCall } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-const HERO_BG = "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80";
+const HERO_BG = "/tomi-hero.png";
 
 const rotatingWords = ["międzynarodowy", "terminowy", "dedykowany", "europejski"];
 
