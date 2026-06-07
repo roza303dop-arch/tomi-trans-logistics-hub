@@ -1,6 +1,8 @@
-import { Ship, Truck, Waypoints } from "lucide-react";
+import { Ship, Waypoints } from "lucide-react";
 
 import { SectionHeading } from "./SectionHeading";
+import fleetAsset from "@/assets/tomi-trans-fleet.jpg.asset.json";
+import ferryAsset from "@/assets/tomi-trans-ferry.jpg.asset.json";
 
 const hubs = [
   { name: "Warszawa", left: "58%", top: "34%" },
@@ -53,9 +55,8 @@ export function Coverage() {
         </div>
 
         <div className="space-y-4">
-          <div className="relative h-[260px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-surface via-background to-surface">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--primary)/0.18),transparent_60%)]" aria-hidden="true" />
-            <Truck className="absolute left-[-2rem] bottom-[-2rem] size-[18rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
+          <div className="relative h-[260px] overflow-hidden rounded-lg border border-border/70">
+            <img src={fleetAsset.url} alt="Flota Tomi-Trans" className="absolute inset-0 h-full w-full object-cover" />
           </div>
 
           <div className="glass-panel p-6">
@@ -69,9 +70,8 @@ export function Coverage() {
               </div>
             </div>
           </div>
-          <div className="relative h-[220px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-background via-surface to-background">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_60%,hsl(var(--primary)/0.16),transparent_60%)]" aria-hidden="true" />
-            <Ship className="absolute right-[-1rem] top-[-1rem] size-[16rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
+          <div className="relative h-[220px] overflow-hidden rounded-lg border border-border/70">
+            <img src={ferryAsset.url} alt="Transport promowy Tomi-Trans" className="absolute inset-0 h-full w-full object-cover" />
           </div>
 
           <div className="glass-panel p-6">

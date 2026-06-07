@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, PhoneCall, Truck } from "lucide-react";
+import { ArrowRight, PhoneCall } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import heroAsset from "@/assets/tomi-trans-hero.jpg.asset.json";
 
 const rotatingWords = ["międzynarodowy", "terminowy", "dedykowany", "europejski"];
 
@@ -18,14 +19,10 @@ export function Hero() {
 
   return (
     <section id="start" className="hero-screen relative flex min-h-[100svh] items-end overflow-hidden pt-28">
-      <div
-        className="absolute inset-0 bg-gradient-to-br from-background via-surface to-background"
-        aria-hidden="true"
-      />
-      <Truck
-        className="absolute right-[-4rem] bottom-[-4rem] size-[36rem] text-primary/10"
-        aria-hidden="true"
-        strokeWidth={1}
+      <img
+        src={heroAsset.url}
+        alt="Tomi-Trans flota w trasie"
+        className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="hero-overlay absolute inset-0" aria-hidden="true" />
       <div className="hero-grid absolute inset-0" aria-hidden="true" />

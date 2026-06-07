@@ -1,7 +1,8 @@
-import { ShieldCheck, Truck, Waypoints } from "lucide-react";
+import { ShieldCheck, Waypoints } from "lucide-react";
 
 import { SectionHeading } from "./SectionHeading";
 import { StatCounter } from "./StatCounter";
+import blackTruckAsset from "@/assets/tomi-trans-black-truck.jpg.asset.json";
 
 export function About() {
 
@@ -57,9 +58,9 @@ export function About() {
           </div>
         </div>
 
-        <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-surface via-background to-surface">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--primary)/0.18),transparent_60%)]" aria-hidden="true" />
-          <Truck className="absolute right-[-3rem] top-[-2rem] size-[26rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
+        <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-border/70">
+          <img src={blackTruckAsset.url} alt="Czarna ciężarówka Tomi-Trans" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" aria-hidden="true" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
             <p className="section-kicker">Bestwina / Polska</p>
             <p className="max-w-md text-sm leading-6 text-foreground/88">
