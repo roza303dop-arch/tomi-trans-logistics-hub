@@ -1,13 +1,10 @@
-import { ShieldCheck, Waypoints } from "lucide-react";
+import { ShieldCheck, Truck, Waypoints } from "lucide-react";
 
 import { SectionHeading } from "./SectionHeading";
 import { StatCounter } from "./StatCounter";
 
-interface AboutProps {
-  imageUrl: string;
-}
+export function About() {
 
-export function About({ imageUrl }: AboutProps) {
   return (
     <section id="o-nas" className="section-band section-cut-top">
       <div className="section-inner grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
