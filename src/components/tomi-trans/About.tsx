@@ -57,14 +57,9 @@ export function About() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-lg border border-border/70">
-          <img
-            src={imageUrl}
-            alt="Biała ciężarówka Tomi-Trans przygotowana do wyjazdu"
-            className="h-full min-h-[420px] w-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+        <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-surface via-background to-surface">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--primary)/0.18),transparent_60%)]" aria-hidden="true" />
+          <Truck className="absolute right-[-3rem] top-[-2rem] size-[26rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
             <p className="section-kicker">Bestwina / Polska</p>
             <p className="max-w-md text-sm leading-6 text-foreground/88">
@@ -72,6 +67,7 @@ export function About() {
             </p>
           </div>
         </div>
+
       </div>
     </section>
   );
