@@ -8,11 +8,11 @@ import { Hero } from "@/components/tomi-trans/Hero";
 import { Navbar } from "@/components/tomi-trans/Navbar";
 import { Services } from "@/components/tomi-trans/Services";
 import { WhyUs } from "@/components/tomi-trans/WhyUs";
-import blackTruck from "@/assets/tomi-trans-black-truck.jpg.asset.json";
-import ferry from "@/assets/tomi-trans-ferry.jpg.asset.json";
-import fleet from "@/assets/tomi-trans-fleet.jpg.asset.json";
-import hero from "@/assets/tomi-trans-hero.jpg.asset.json";
-import roadside from "@/assets/tomi-trans-roadside.jpg.asset.json";
+const hero = { url: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80" };
+const blackTruck = { url: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80" };
+const fleet = { url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" };
+const ferry = { url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" };
+const roadside = { url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" };
 
 export default function Index() {
   return (
