@@ -53,14 +53,11 @@ export function Coverage() {
         </div>
 
         <div className="space-y-4">
-          <div className="overflow-hidden rounded-lg border border-border/70">
-            <img
-              src={fleetImageUrl}
-              alt="Flota ciężarówek Tomi-Trans gotowa do obsługi transportów międzynarodowych"
-              className="h-[260px] w-full object-cover"
-              loading="lazy"
-            />
+          <div className="relative h-[260px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-surface via-background to-surface">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--primary)/0.18),transparent_60%)]" aria-hidden="true" />
+            <Truck className="absolute left-[-2rem] bottom-[-2rem] size-[18rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
           </div>
+
           <div className="glass-panel p-6">
             <div className="flex items-start gap-4">
               <Waypoints className="mt-1 size-6 text-primary" />
