@@ -1,4 +1,4 @@
-import { Ship, Waypoints } from "lucide-react";
+import { Ship, Truck, Waypoints } from "lucide-react";
 
 import { SectionHeading } from "./SectionHeading";
 
@@ -14,12 +14,8 @@ const hubs = [
   { name: "Wilno", left: "63%", top: "19%" },
 ];
 
-interface CoverageProps {
-  fleetImageUrl: string;
-  ferryImageUrl: string;
-}
+export function Coverage() {
 
-export function Coverage({ fleetImageUrl, ferryImageUrl }: CoverageProps) {
   return (
     <section id="zasieg" className="section-band section-cut-top">
       <div className="section-inner grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
