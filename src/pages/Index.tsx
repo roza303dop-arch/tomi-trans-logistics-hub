@@ -15,7 +15,7 @@ export default function Index() {
     <>
       <Navbar />
       <main>
-        <Hero heroImageUrl={hero.url} />
+        <Hero />
 
         <section className="border-y border-border/50 bg-surface/80 py-4 backdrop-blur-md">
           <div className="section-inner grid gap-4 md:grid-cols-2 xl:grid-cols-4">
