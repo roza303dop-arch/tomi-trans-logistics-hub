@@ -2,7 +2,7 @@ import { ShieldCheck, Waypoints } from "lucide-react";
 
 import { SectionHeading } from "./SectionHeading";
 import { StatCounter } from "./StatCounter";
-const BLACK_TRUCK_BG = "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80";
+const BLACK_TRUCK_BG = "/tomi-black-truck.png";
 
 export function About() {
 
