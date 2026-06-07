@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, PhoneCall } from "lucide-react";
+import { ArrowRight, PhoneCall, Truck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
 const rotatingWords = ["międzynarodowy", "terminowy", "dedykowany", "europejski"];
 
-interface HeroProps {
-  heroImageUrl: string;
-}
-
-export function Hero({ heroImageUrl }: HeroProps) {
+export function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
@@ -22,15 +18,19 @@ export function Hero({ heroImageUrl }: HeroProps) {
 
   return (
     <section id="start" className="hero-screen relative flex min-h-[100svh] items-end overflow-hidden pt-28">
-      <img
-        src={heroImageUrl}
-        alt="Ciągnik siodłowy Tomi-Trans na europejskiej trasie"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-        fetchPriority="high"
+      <div
+        className="absolute inset-0 bg-gradient-to-br from-background via-surface to-background"
+        aria-hidden="true"
+      />
+      <Truck
+        className="absolute right-[-4rem] bottom-[-4rem] size-[36rem] text-primary/10"
+        aria-hidden="true"
+        strokeWidth={1}
       />
       <div className="hero-overlay absolute inset-0" aria-hidden="true" />
       <div className="hero-grid absolute inset-0" aria-hidden="true" />
       <div className="hero-amber-glow absolute inset-x-0 top-[12%] h-64" aria-hidden="true" />
+
 
       <div className="section-inner relative z-10 flex w-full pb-10 md:pb-14 lg:pb-18">
         <div className="max-w-2xl pl-4 sm:pl-8 md:pl-12 lg:pl-16">
