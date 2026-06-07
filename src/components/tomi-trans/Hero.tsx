@@ -33,9 +33,9 @@ export function Hero({ heroImageUrl }: HeroProps) {
       <div className="hero-amber-glow absolute inset-x-0 top-[12%] h-64" aria-hidden="true" />
 
       <div className="section-inner relative z-10 flex w-full pb-10 md:pb-14 lg:pb-18">
-        <div className="max-w-4xl">
+        <div className="max-w-2xl pl-4 sm:pl-8 md:pl-12 lg:pl-16">
           <p className="section-kicker fade-up">Transport / Spedycja / Logistyka</p>
-          <h1 className="hero-title fade-up [animation-delay:120ms]">
+          <h1 className="hero-title hero-title--compact fade-up [animation-delay:120ms]">
             Ruch, który dowozi
             <br />
             Twój ładunek przez całą Unię Europejską.
