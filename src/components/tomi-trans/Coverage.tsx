@@ -69,14 +69,11 @@ export function Coverage() {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden rounded-lg border border-border/70">
-            <img
-              src={ferryImageUrl}
-              alt="Naczepy transportowe przewożone promem podczas realizacji transportu w Europie"
-              className="h-[220px] w-full object-cover"
-              loading="lazy"
-            />
+          <div className="relative h-[220px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-background via-surface to-background">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_60%,hsl(var(--primary)/0.16),transparent_60%)]" aria-hidden="true" />
+            <Ship className="absolute right-[-1rem] top-[-1rem] size-[16rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
           </div>
+
           <div className="glass-panel p-6">
             <div className="flex items-start gap-4">
               <Ship className="mt-1 size-6 text-primary" />
