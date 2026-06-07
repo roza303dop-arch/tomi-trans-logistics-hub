@@ -1,4 +1,4 @@
-import { Ship, Waypoints } from "lucide-react";
+import { Ship, Truck, Waypoints } from "lucide-react";
 
 import { SectionHeading } from "./SectionHeading";
 
@@ -14,12 +14,8 @@ const hubs = [
   { name: "Wilno", left: "63%", top: "19%" },
 ];
 
-interface CoverageProps {
-  fleetImageUrl: string;
-  ferryImageUrl: string;
-}
+export function Coverage() {
 
-export function Coverage({ fleetImageUrl, ferryImageUrl }: CoverageProps) {
   return (
     <section id="zasieg" className="section-band section-cut-top">
       <div className="section-inner grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
@@ -57,14 +53,11 @@ export function Coverage({ fleetImageUrl, ferryImageUrl }: CoverageProps) {
         </div>
 
         <div className="space-y-4">
-          <div className="overflow-hidden rounded-lg border border-border/70">
-            <img
-              src={fleetImageUrl}
-              alt="Flota ciężarówek Tomi-Trans gotowa do obsługi transportów międzynarodowych"
-              className="h-[260px] w-full object-cover"
-              loading="lazy"
-            />
+          <div className="relative h-[260px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-surface via-background to-surface">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--primary)/0.18),transparent_60%)]" aria-hidden="true" />
+            <Truck className="absolute left-[-2rem] bottom-[-2rem] size-[18rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
           </div>
+
           <div className="glass-panel p-6">
             <div className="flex items-start gap-4">
               <Waypoints className="mt-1 size-6 text-primary" />
@@ -76,14 +69,11 @@ export function Coverage({ fleetImageUrl, ferryImageUrl }: CoverageProps) {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden rounded-lg border border-border/70">
-            <img
-              src={ferryImageUrl}
-              alt="Naczepy transportowe przewożone promem podczas realizacji transportu w Europie"
-              className="h-[220px] w-full object-cover"
-              loading="lazy"
-            />
+          <div className="relative h-[220px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-background via-surface to-background">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_60%,hsl(var(--primary)/0.16),transparent_60%)]" aria-hidden="true" />
+            <Ship className="absolute right-[-1rem] top-[-1rem] size-[16rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
           </div>
+
           <div className="glass-panel p-6">
             <div className="flex items-start gap-4">
               <Ship className="mt-1 size-6 text-primary" />

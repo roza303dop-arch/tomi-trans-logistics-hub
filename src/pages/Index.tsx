@@ -1,4 +1,4 @@
-import { Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Mail, MapPin, Phone, Truck } from "lucide-react";
 
 import { About } from "@/components/tomi-trans/About";
 import { Contact } from "@/components/tomi-trans/Contact";
@@ -8,18 +8,14 @@ import { Hero } from "@/components/tomi-trans/Hero";
 import { Navbar } from "@/components/tomi-trans/Navbar";
 import { Services } from "@/components/tomi-trans/Services";
 import { WhyUs } from "@/components/tomi-trans/WhyUs";
-const hero = { url: "/truck1.jpg" };
-const blackTruck = { url: "/truck1.jpg" };
-const fleet = { url: "/truck1.jpg" };
-const ferry = { url: "/truck1.jpg" };
-const roadside = { url: "/truck1.jpg" };
+
 
 export default function Index() {
   return (
     <>
       <Navbar />
       <main>
-        <Hero heroImageUrl={hero.url} />
+        <Hero />
 
         <section className="border-y border-border/50 bg-surface/80 py-4 backdrop-blur-md">
           <div className="section-inner grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -47,20 +43,16 @@ export default function Index() {
           </div>
         </section>
 
-        <About imageUrl={blackTruck.url} />
+        <About />
         <Services />
         <WhyUs />
-        <Coverage fleetImageUrl={fleet.url} ferryImageUrl={ferry.url} />
+        <Coverage />
 
         <section className="section-band">
           <div className="section-inner grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="overflow-hidden rounded-lg border border-border/70">
-              <img
-                src={roadside.url}
-                alt="Ciężarówka Tomi-Trans podczas postoju na trasie w Europie Południowej"
-                className="h-[360px] w-full object-cover"
-                loading="lazy"
-              />
+            <div className="relative h-[360px] overflow-hidden rounded-lg border border-border/70 bg-gradient-to-br from-surface via-background to-surface">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_50%,hsl(var(--primary)/0.18),transparent_65%)]" aria-hidden="true" />
+              <Truck className="absolute right-[-3rem] bottom-[-3rem] size-[22rem] text-primary/15" strokeWidth={1} aria-hidden="true" />
             </div>
             <aside className="glass-panel flex flex-col justify-between p-6 sm:p-8">
               <div>
