@@ -8,11 +8,11 @@ import { Hero } from "@/components/tomi-trans/Hero";
 import { Navbar } from "@/components/tomi-trans/Navbar";
 import { Services } from "@/components/tomi-trans/Services";
 import { WhyUs } from "@/components/tomi-trans/WhyUs";
-import blackTruck from "@/assets/tomi-trans-black-truck-user.png.asset.json";
-import ferry from "@/assets/tomi-trans-ferry-user.png.asset.json";
-import fleet from "@/assets/tomi-trans-fleet-user.png.asset.json";
-import hero from "@/assets/tomi-trans-hero-user.png.asset.json";
-import roadside from "@/assets/tomi-trans-roadside-user.png.asset.json";
+const hero = { url: "/truck1.jpg" };
+const blackTruck = { url: "/truck1.jpg" };
+const fleet = { url: "/truck1.jpg" };
+const ferry = { url: "/truck1.jpg" };
+const roadside = { url: "/truck1.jpg" };
 
 export default function Index() {
   return (
