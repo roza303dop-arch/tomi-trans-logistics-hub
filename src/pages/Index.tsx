@@ -1,4 +1,4 @@
-import { Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Mail, MapPin, Phone, Truck } from "lucide-react";
 
 import { About } from "@/components/tomi-trans/About";
 import { Contact } from "@/components/tomi-trans/Contact";
@@ -8,11 +8,7 @@ import { Hero } from "@/components/tomi-trans/Hero";
 import { Navbar } from "@/components/tomi-trans/Navbar";
 import { Services } from "@/components/tomi-trans/Services";
 import { WhyUs } from "@/components/tomi-trans/WhyUs";
-const hero = { url: "/truck1.jpg" };
-const blackTruck = { url: "/truck1.jpg" };
-const fleet = { url: "/truck1.jpg" };
-const ferry = { url: "/truck1.jpg" };
-const roadside = { url: "/truck1.jpg" };
+
 
 export default function Index() {
   return (
