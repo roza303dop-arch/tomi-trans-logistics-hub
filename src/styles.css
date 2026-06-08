@@ -503,6 +503,9 @@
   100% {
     box-shadow: 0 0 0 0 color-mix(in oklab, var(--primary) 0%, transparent);
   }
+}
+
+
 
 @keyframes heroWordIn {
   0% {
