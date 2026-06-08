@@ -33,10 +33,10 @@ export function Hero() {
       <div className="section-inner relative z-10 flex w-full pb-10 md:pb-14 lg:pb-18">
         <div className="max-w-2xl pl-4 sm:pl-8 md:pl-12 lg:pl-16">
           <p className="section-kicker fade-up">Transport / Spedycja / Logistyka</p>
-          <h1 className="hero-title hero-title--compact fade-up [animation-delay:120ms]">
-            Ruch, który dowozi
-            <br />
-            Twój ładunek przez całą Unię Europejską.
+          <h1 className="hero-title hero-title--compact hero-title-animated fade-up [animation-delay:120ms]">
+            <span className="hero-word" style={{ animationDelay: "200ms" }}>Ruch</span>{" "}
+            <span className="hero-word" style={{ animationDelay: "450ms" }}>który</span>{" "}
+            <span className="hero-word hero-word--accent" style={{ animationDelay: "700ms" }}>dowozi</span>
           </h1>
           <p className="hero-copy fade-up [animation-delay:220ms]">
             Tomi-Trans realizuje przewozy krajowe i międzynarodowe z Polski do każdego

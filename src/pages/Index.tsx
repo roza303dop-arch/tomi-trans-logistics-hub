@@ -51,8 +51,9 @@ export default function Index() {
 
         <section className="section-band">
           <div className="section-inner grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="relative h-[360px] overflow-hidden rounded-lg border border-border/70">
-              <div role="img" aria-label="Tomi-Trans w drodze" className="absolute inset-0 h-full w-full" style={{ backgroundImage: `url(${ROADSIDE_BG})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+            <div className="relative mx-auto w-full max-w-[420px] aspect-[9/16] overflow-hidden rounded-lg border border-border/70 group">
+              <div role="img" aria-label="Tomi-Trans w drodze" className="absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-out group-hover:scale-110" style={{ backgroundImage: `url(${ROADSIDE_BG})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
             </div>
             <aside className="glass-panel flex flex-col justify-between p-6 sm:p-8">
               <div>
