@@ -503,7 +503,25 @@
   100% {
     box-shadow: 0 0 0 0 color-mix(in oklab, var(--primary) 0%, transparent);
   }
+
+@keyframes heroWordIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
+
+@keyframes heroShine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   html {
