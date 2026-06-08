@@ -444,6 +444,42 @@
     opacity: 0;
     animation: fadeUp 0.8s ease forwards;
   }
+
+  .hero-title-animated {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+  }
+
+  .hero-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(8px);
+    animation: heroWordIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    transition: color 280ms ease, transform 280ms ease;
+  }
+
+  .hero-word:hover {
+    transform: translateY(-4px);
+  }
+
+  .hero-word--accent {
+    background: linear-gradient(120deg, var(--color-primary), color-mix(in oklab, var(--primary) 55%, white));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    animation:
+      heroWordIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards,
+      heroShine 4.5s ease-in-out 1.4s infinite;
+  }
+
+  a, button, .nav-link, .service-card, .contact-card, .feature-row {
+    transition-property: color, background-color, border-color, transform, box-shadow, opacity, filter;
+    transition-duration: 280ms;
+    transition-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
 }
 
 @keyframes fadeUp {
